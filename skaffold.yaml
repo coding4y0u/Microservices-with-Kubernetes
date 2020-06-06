@@ -25,6 +25,14 @@ build:
       sync:
         manual:
           - src: "**/*.js"
+            dest: .
+    - image: ltpfj4all/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
             dest:
               .
               # us.gcr.io/ticketing-dev-278622
